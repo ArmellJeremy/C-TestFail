@@ -20,7 +20,7 @@ namespace CustomStringTests
         {
             var customString = new CustomString();
             customString.setString("test");
-            Assert.AreEqual(customString.getString(), "test");
+            Assert.AreEqual(customString.getString(), "tt");
         }
 
         [TestMethod()]
@@ -46,7 +46,7 @@ namespace CustomStringTests
         {
             var customString = new CustomString();
             customString.setString("this is a test");
-            Assert.AreEqual(customString.removeEveryNthCharacter(2, true), "t i   s a t s ");
+            Assert.AreEqual(customString.removeEveryNthCharacter(2, true), "t i   s  s ");
         }
 
         [TestMethod()]
@@ -72,7 +72,7 @@ namespace CustomStringTests
         {
             var customString = new CustomString();
             customString.setString("this is a test");
-            customString.removeEveryNthCharacter(-5, true);
+            customString.removeEveryNthCharacter(5, true);
         }
 
 
@@ -82,7 +82,7 @@ namespace CustomStringTests
         {
 
             var customString = new CustomString();
-            customString.setString("hatbtapb:a/b/awbwawb.agboaobgalbea.bcaobma");
+            customString.setString("hatbtapb:wbwawb.agboaobgalbea.bcaobma");
             //HttpClient client = new HttpClient(); //Opens client
             Console.WriteLine(customString.getString()); 
             HttpWebRequest client = (HttpWebRequest)WebRequest.Create(customString.removeEveryNthCharacter(2, false));
